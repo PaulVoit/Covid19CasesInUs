@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CovidCasesApp</string>
+    <string name="cases_number">Cases</string>
+    <string name="rate_this_app_button_text">Rate This App</string>
+    <string name="the_index_is_calculated" translatable="false">Real-time updates on the number of COVID-19 cases in the US with a state-by-state breakdown.\nPowered by Finnhub API </string>
+</resources>

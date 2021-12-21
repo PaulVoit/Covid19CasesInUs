@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="State" />
+
+    <TextView
+        android:id="@+id/tvCurrentState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvCurrentCases"
+        app:layout_constraintStart_toEndOf="@+id/tvState"
+        app:layout_constraintTop_toTopOf="@+id/tvState"
+        tools:text="New York" />
+
+    <TextView
+        android:id="@+id/tvCases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toStartOf="@+id/tvCurrentCases"
+        app:layout_constraintTop_toBottomOf="@id/tvState"
+        tools:text="Cases" />
+
+    <TextView
+        android:id="@+id/tvCurrentCases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@+id/tvCurrentState"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentState"
+        tools:text="100" />
+
+    <TextView
+        tools:text="200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tvState"
+        android:id="@+id/tvCurrentDeath"
+        app:layout_constraintTop_toTopOf="@+id/tvState"/>
+
+    <TextView
+        tools:text="05.05.2021"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tvDateOfUpdate"
+        app:layout_constraintTop_toTopOf="@+id/tvCases"/>
+
+    <TextView
+        android:id="@+id/tvDeath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Death"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCurrentDeath"
+        app:layout_constraintEnd_toStartOf="@+id/tvCurrentDeath"
+        app:layout_constraintTop_toTopOf="@+id/tvCurrentDeath"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Updated"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDateOfUpdate"
+        app:layout_constraintEnd_toStartOf="@+id/tvDateOfUpdate"
+        app:layout_constraintTop_toTopOf="@+id/tvDateOfUpdate"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
