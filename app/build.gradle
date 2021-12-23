@@ -7,7 +7,6 @@ plugins {
 
 android {
     compileSdkVersion 30
-
     defaultConfig {
         applicationId "com.example.covidcasesapp"
         minSdkVersion 17
@@ -48,5 +47,5 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxkotlin:2.1.0'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+
 }
