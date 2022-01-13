@@ -1,21 +1,19 @@
 package com.kotlinexample.covid19casesapp.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import com.kotlinexample.covid19casesapp.R
-import kotlinx.android.synthetic.main.recycler_view_item.view.*
+import com.kotlinexample.covid19casesapp.databinding.RecyclerViewItemBinding
 
 
 class CovidCasesAdapter : BaseAdapter<CovidCasesAdapter.CovidCasesViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CovidCasesViewHolder {
-        val v =
-            LayoutInflater.from(parent.context).inflate(R.layout.recycler_view_item, parent, false)
-        return CovidCasesViewHolder(v)
+        val binding =
+            RecyclerViewItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return CovidCasesViewHolder(binding)
     }
 
-    class CovidCasesViewHolder(view: View) : BaseViewHolder(view) {
+    class CovidCasesViewHolder(viewBinding: RecyclerViewItemBinding) : BaseViewHolder(viewBinding) {
         var state: String = ""
         var case: Int = 0
         var death: Int = 0
@@ -31,10 +29,10 @@ class CovidCasesAdapter : BaseAdapter<CovidCasesAdapter.CovidCasesViewHolder>() 
         override fun bind(item: Any) {
             let {
                 item as Finnhub
-                view.tvCurrentState.text = item.state
-                view.tvCurrentCases.text = item.case.toString()
-                view.tvCurrentDeath.text = item.death.toString()
-                view.tvDateOfUpdate.text = item.updated
+                viewBinding.tvCurrentState.text = item.state
+                viewBinding.tvCurrentCases.text = item.case.toString()
+                viewBinding.tvCurrentDeath.text = item.death.toString()
+                viewBinding.tvDateOfUpdate.text = item.updated
                 state = item.state
                 case = item.case
                 death = item.death

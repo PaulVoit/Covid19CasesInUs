@@ -3,23 +3,24 @@ package com.kotlinexample.covid19casesapp.activities
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
 import com.kotlinexample.covid19casesapp.R
+import com.kotlinexample.covid19casesapp.databinding.ActivityInfoBinding
 
 class InfoActivity : AppCompatActivity() {
-    private lateinit var mTextInfo: TextView
+
+    private lateinit var binding: ActivityInfoBinding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_info)
+        binding = ActivityInfoBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        mTextInfo = findViewById(R.id.textView)
-        val mImageInfo: ImageView = findViewById(R.id.imageView)
-        var buttonRateApp: Button = findViewById(R.id.buttonRateApp)
-        buttonRateApp.setOnClickListener {
+        binding.textView.text = getString(R.string.the_index_is_calculated)
+        binding.imageView.setImageResource(R.drawable.covid)
+        binding.buttonRateApp.setOnClickListener {
             startActivity(
                 Intent(
                     Intent.ACTION_VIEW,

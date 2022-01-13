@@ -14,6 +14,7 @@ abstract class BaseListFragment : Fragment() {
     protected lateinit var viewAdapter: BaseAdapter<*>
     private lateinit var viewManager: RecyclerView.LayoutManager
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewManager = LinearLayoutManager(context)

@@ -1,7 +1,9 @@
 package com.kotlinexample.covid19casesapp.adapter
 
-import android.view.View
+
 import androidx.recyclerview.widget.RecyclerView
+import com.kotlinexample.covid19casesapp.databinding.RecyclerViewItemBinding
+
 
 abstract class BaseAdapter<VH : BaseAdapter.BaseViewHolder> : RecyclerView.Adapter<VH>() {
     var items: ArrayList<Any> = ArrayList()
@@ -26,7 +28,7 @@ abstract class BaseAdapter<VH : BaseAdapter.BaseViewHolder> : RecyclerView.Adapt
         items.addAll(newItems)
     }
 
-    abstract class BaseViewHolder(protected val view: View) : RecyclerView.ViewHolder(view) {
+    abstract class BaseViewHolder(var viewBinding: RecyclerViewItemBinding) : RecyclerView.ViewHolder(viewBinding.root) {
         abstract fun bind(item: Any)
     }
 }
